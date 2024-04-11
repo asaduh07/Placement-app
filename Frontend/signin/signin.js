@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         try {
-            const response = await axios.post('https://placement-app-2ph4.onrender.com/api/user/signin', formData);
+            const response = await axios.post('https://placement-app-7bd1.onrender.com/api/user/signin', formData);
             const data = response.data;
             if (data.success) {
                 // Store the token in session storage

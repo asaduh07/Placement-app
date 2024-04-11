@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 email: emailInput.value,
                 password: setPasswordInput.value,
             }
-            const data = await axios.post('https://placement-app-2ph4.onrender.com/api/user/signup', formData);
+            const data = await axios.post('https://placement-app-7bd1.onrender.com/api/user/signup', formData);
             if (data.data.success) {
                 const alertEl = document.createElement('div');
                 alertEl.classList.add('alert', 'alert-success');

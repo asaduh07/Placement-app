@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navEl.appendChild(logoutEl);
 
     logoutlink.addEventListener('click',async()=>{
-        const response=await axios.get('https://placement-app-2ph4.onrender.com/api/user/logout');
+        const response=await axios.get('https://placement-app-7bd1.onrender.com/api/user/logout');
         console.log(response.data);
         if(response.data.success){
             sessionStorage.removeItem('jwtToken');
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             const token = sessionStorage.getItem('jwtToken');
             const headers = { Authorization: `Bearer ${token}` }
-            const response = await axios.post('https://placement-app-2ph4.onrender.com/api/student/add', 
+            const response = await axios.post('https://placement-app-7bd1.onrender.com/api/student/add', 
                 formData,{headers: headers}
             );
 

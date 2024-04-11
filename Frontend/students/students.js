@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const token = sessionStorage.getItem('jwtToken');
     const headers = { Authorization: `Bearer ${token}` }
     try {
-        const response = await axios.get('https://placement-app-2ph4.onrender.com/api/student/all', { headers });
+        const response = await axios.get('https://placement-app-7bd1.onrender.com/api/student/all', { headers });
         const students = response.data.res;
         const tableBody = document.querySelector('tbody');
         students.forEach((student, index) => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
 
         logoutlink.addEventListener('click',async()=>{
-            const response=await axios.get('https://placement-app-2ph4.onrender.com/api/user/logout');
+            const response=await axios.get('https://placement-app-7bd1.onrender.com/api/user/logout');
             console.log(response.data);
             if(response.data.success){
                 sessionStorage.removeItem('jwtToken');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         const downloadEl = document.getElementById('download-csv');
         downloadEl.addEventListener('click', async () => {
-            const response = await axios.get('https://placement-app-2ph4.onrender.com/api/user/download-csv', {
+            const response = await axios.get('https://placement-app-7bd1.onrender.com/api/user/download-csv', {
                 responseType: 'blob',
                 headers: headers
             })
