@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     logoutEl.appendChild(logoutlink);
     navEl.appendChild(logoutEl);
     logoutlink.addEventListener('click',async()=>{
-        const response=await axios.get('http://localhost:3100/api/user/logout');
+        const response=await axios.get('https://placement-app-2ph4.onrender.com/api/user/logout');
         console.log(response.data);
         if(response.data.success){
             sessionStorage.removeItem('jwtToken');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     })
     try {
-        const response = await axios.get('http://localhost:3100/api/company/all',{headers});
+        const response = await axios.get('https://placement-app-2ph4.onrender.com/api/company/all',{headers});
         const tableBody = document.querySelector('.table tbody');
         const interviews = response.data.res;
         interviews.forEach((interview, index) => {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 // You can access the selected value from dropdown using dropdown.value
                 const resultInput = dropdown.value;
                 try {
-                    const response = await axios.post(`http://localhost:3100/api/company/${interview._id}`, { result: resultInput },{headers});
+                    const response = await axios.post(`https://placement-app-2ph4.onrender.com/api/company/${interview._id}`, { result: resultInput },{headers});
                     if (response.data.success) {
                         location.reload();
                     }
