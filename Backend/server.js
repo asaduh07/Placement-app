@@ -24,6 +24,9 @@ server.use(session({
 }))
 
 //Employee routes
+server.get('/',(req,res)=>{
+    res.status(200).send("Welcome to the Placement App")
+})
 server.use('/api/user',userRouter);
 server.use('/api/student',jwtAuth,studentRouter);
 server.use('/api/company',jwtAuth,companyRouter);
