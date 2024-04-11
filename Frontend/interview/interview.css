@@ -1,0 +1,35 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    width: 40%;
+    margin: 2%;
+    border-radius: 2%;
+    padding: 2%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5)
+}
+i{
+    margin: 0 5%;
+    color: #3a244a;
+}
+i:hover{
+    cursor: pointer;
+    color: #D72638;
+}
+#add-interview{
+    background-color: #3a244a;
+    color: white;
+}
+.result{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}

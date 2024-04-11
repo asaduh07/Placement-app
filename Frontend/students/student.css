@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    margin: 5%;
+    border-radius: 2%;
+    padding: 2%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5)
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+#add-student{
+    background-color:#3a244a;
+    color: white;
+}
+#download-csv:hover{
+    cursor: pointer;
+    color: #D72638;
+
+}
