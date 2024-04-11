@@ -5,7 +5,7 @@ const InterviewSchema=new mongoose.Schema({
     ref:"Student"},
     company: { type:String,required:true },
     date: { type: Date },
-    result: { type: String, enum: ['PASS', 'FAIL', 'On Hold', 'Didn’t Attempt'], default:"None"}
+    result: { type: String, enum: ['PASS', 'FAIL', 'On Hold', 'Didn’t Attempt']}
     
 });
 
