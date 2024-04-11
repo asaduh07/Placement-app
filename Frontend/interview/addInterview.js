@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     logoutEl.appendChild(logoutlink);
     navEl.appendChild(logoutEl);
     logoutlink.addEventListener('click',async()=>{
-        const response=await axios.get('https://placement-app-2ph4.onrender.com/api/user/logout');
+        const response=await axios.get('https://placement-app-7bd1.onrender.com/api/user/logout');
         console.log(response.data);
         if(response.data.success){
             sessionStorage.removeItem('jwtToken');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
     try {
-        const response = await axios.get('https://placement-app-2ph4.onrender.com/api/student/all',{headers});
+        const response = await axios.get('https://placement-app-7bd1.onrender.com/api/student/all',{headers});
         const students = response.data.res;
         students.forEach(student => {
             const optionElement = document.createElement('option');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             date: dateInput.value,
         }
         try {
-            const response = await axios.post('https://placement-app-2ph4.onrender.com/api/company/add', formData,{headers});
+            const response = await axios.post('https://placement-app-7bd1.onrender.com/api/company/add', formData,{headers});
             if (response.data.success) {
                 window.location.href = './interview.html'
             }
